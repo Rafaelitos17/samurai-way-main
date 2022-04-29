@@ -6,9 +6,8 @@ export const MyPosts = () => {
     return (
         <div className={s.posts}>
             MyPosts
-            <button>HEllo</button>
-            <input type="placeholder"/>
-            <Post />
+            <Post message={'Hello1'} likesCount="3"/>
+            <Post message={'Hello2'} likesCount="6"/>
         </div>
     )
 }
