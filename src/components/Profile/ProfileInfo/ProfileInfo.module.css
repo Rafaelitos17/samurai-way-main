@@ -1,0 +1,16 @@
+.image img {
+    width: 1000px;
+    height: 300px;
+}
+
+.item {
+    color: cyan;
+}
+
+.item img {
+    width: 50px;
+}
+
+.descriptionBlock {
+    padding: 10px;
+}
