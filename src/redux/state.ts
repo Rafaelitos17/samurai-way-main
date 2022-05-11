@@ -11,7 +11,7 @@ export type DialogType = {
 export type PostType = {
     id: number
     message: string
-    likesCount: number
+    likesCount: string
 }
 
 export type ProfilePageType = {
@@ -34,8 +34,8 @@ export type RootStateType = {
 export let state:RootStateType  = {
     profilePage: {
         posts: [
-            {id: 1, message: 'hello', likesCount: 20},
-            {id: 1, message: 'bye bye', likesCount: 30}
+            {id: 1, message: 'hello', likesCount: '20'},
+            {id: 1, message: 'bye bye', likesCount: '30'}
         ]
     },
     dialogsPage: {
