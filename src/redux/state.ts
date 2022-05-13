@@ -54,5 +54,10 @@ export let state:RootStateType  = {
             {id: 5, message: 'Hi5'}
         ]
     },
-    sidebar: {}
+    sidebar: {
+        commentaries: [
+            {},
+            {}
+        ]
+    }
 }
