@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 export type MessageType = {
     id: number
     message: string
@@ -30,8 +32,17 @@ export type RootStateType = {
     sidebar: SidebarType
 }
 
+export const addPost = (postMessage: string) => {
+    let newPost: PostType = {
+        id: 5,
+        message: postMessage,
+        likesCount: '0'
+    };
+    state.profilePage.posts.push(newPost);
+    rerenderEntireTree(state)
+}
 
-export let state:RootStateType  = {
+export const state:RootStateType  = {
     profilePage: {
         posts: [
             {id: 1, message: 'hello', likesCount: '20'},
@@ -61,3 +72,4 @@ export let state:RootStateType  = {
         ]
     }
 }
+
