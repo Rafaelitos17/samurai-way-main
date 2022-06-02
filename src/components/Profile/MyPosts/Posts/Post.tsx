@@ -9,7 +9,7 @@ type PostPropsType = {
 export const Post = (props: PostPropsType) => {
     return (
         <div className={s.item}>
-            <img src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png" alt="Avatar"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/50px_x_50px_coloured_logo_on_white_background.svg/768px-50px_x_50px_coloured_logo_on_white_background.svg.png" alt="Avatar"/>
             {props.message}
             <div>
                 <span>like</span> {props.likesCount}
