@@ -10,11 +10,10 @@ type DialogsType = {
 }
 
 export const Dialogs = (props: DialogsType) => {
-
     let state = props.store.getState().dialogsPage;
-    let dialogsElements = props.store._state.dialogsPage.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>)
-    let messagesElements = props.store._state.dialogsPage.messages.map(m => <Message message={m.message}/>)
-    let newMessageBody = props.store._state.dialogsPage.newMessageBody
+    let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>)
+    let messagesElements = state.messages.map(m => <Message message={m.message}/>)
+    let newMessageBody = state.newMessageBody
     let onSendMessageClick = () => {
         props.store.dispatch(sendMessageCreator())
     }

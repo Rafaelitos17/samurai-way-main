@@ -38,17 +38,7 @@ export type StoreType = {
     dispatch: (action: ActionsTypes) => void
 }
 
-export type AddPostActionType = {
-    type: "ADD-POST"
-    postText: string
-}
-export type NewTextActionType = {
-    type: "CHANGE-NEW-TEXT"
-    newText: string
-}
-
-export type ActionsTypes = AddPostActionType| NewTextActionType
-
+export type ActionsTypes = ReturnType<typeof profileReducer>| ReturnType<typeof dialogsReducer>
 
 export const store:StoreType = {
     _state: {
@@ -83,7 +73,7 @@ export const store:StoreType = {
             ]
         }
     },
-    _callSubscriber(state: RootStateType) {
+    _callSubscriber() {
         console.log("")
     },
     getState() {
@@ -99,4 +89,3 @@ export const store:StoreType = {
         this._callSubscriber(this._state)
     }
 }
-

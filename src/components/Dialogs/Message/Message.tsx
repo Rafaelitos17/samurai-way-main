@@ -14,8 +14,8 @@ export const Message: React.FC<MessageType> = (props) => {
     return (
         <div
             className={s.message}>{props.message}
-            <textarea ref={textMessage}></textarea>
-            <button onClick={textOnArea}>addText</button>
+            {/*<textarea ref={textMessage}></textarea>*/}
+            {/*<button onClick={textOnArea}>addText</button>*/}
         </div>
     )
 }
