@@ -11,7 +11,7 @@ export const ProfileInfo = () => {
                         alt=""/>
                 </div>
                 <div className={s.descriptionBlock}>
-                    ava + descr
+                    ava + description
                 </div>
             </div>
         </div>

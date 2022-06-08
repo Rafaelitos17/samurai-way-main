@@ -1,5 +1,3 @@
-import {ActionsTypes} from "./state";
-
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
@@ -11,8 +9,8 @@ const profileReducer = (state: any, action: any) => {
                 message: state.newPostText,
                 likesCount: '0'
             };
-            state.newPostText ='';
             state.posts.push(newPost)
+            state.newPostText =''
             return state;
         case UPDATE_NEW_POST_TEXT:
             state.newPostText = action.newText
@@ -22,7 +20,7 @@ const profileReducer = (state: any, action: any) => {
     }
 }
 
-export const addPostActionCreator = (): ActionsTypes => ({type: ADD_POST})
-export const updatePostActionCreator = (text: string):ActionsTypes => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+export const addPostActionCreator = () => ({type: ADD_POST})
+export const updatePostActionCreator = (text: string) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
 
 export default profileReducer;
