@@ -1,6 +1,7 @@
-import profileReducer from "./profile-reducer";
+
 import dialogsReducer from "./dialogs-reducer";
 import sidebarReducer from "./sidebar-reducer";
+import {profileReducer} from "./profile-reducer";
 
 export type MessageType = {
     id: number
@@ -38,7 +39,7 @@ export type StoreType = {
     dispatch: (action: ActionsTypes) => void
 }
 
-export type ActionsTypes = ReturnType<typeof profileReducer>| ReturnType<typeof dialogsReducer>
+export type ActionsTypes = ReturnType<typeof profileReducer>| ReturnType<typeof dialogsReducer> | ReturnType<typeof sidebarReducer>
 
 export const store:StoreType = {
     _state: {
