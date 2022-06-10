@@ -4,11 +4,13 @@ import {Dialogs} from "./Dialogs";
 import {StoreContext} from "../../StoreContext";
 
 
+
 export const DialogsContainer = () => {
 
     return <StoreContext.Consumer>
-        {(store) => {
-            let state = store.getState().dialogsPage
+        {(store: any) => {
+            // let state = store.getState().dialogsPage
+            let state = store.getState()
 
             let onSendMessageClick = () => {
                 store.dispatch(sendMessageCreator())
@@ -19,7 +21,7 @@ export const DialogsContainer = () => {
             return <Dialogs
                 updateNewMessageBody={onNewMessageChange}
                 sendMessage={onSendMessageClick}
-                dialogsPage={state}
+                dialogsPage={state.dialogsReducer}
             />
         }
     }

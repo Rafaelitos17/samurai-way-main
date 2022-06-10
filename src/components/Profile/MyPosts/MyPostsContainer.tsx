@@ -7,7 +7,7 @@ import {MyPosts} from "./MyPosts";
 export const MyPostsContainer = () => {
     return (
         <StoreContext.Consumer>
-            {(store)=> {
+            {(store:any)=> {
                 let state = store.getState();
                 let addPost = () => {
                     store.dispatch(addPostActionCreator())
@@ -20,8 +20,8 @@ export const MyPostsContainer = () => {
                 return <MyPosts
                     addPost={addPost}
                     updateNewPostText={changePost}
-                    posts={state.profilePage.posts}
-                    newPostText={state.profilePage.newPostText}
+                    posts={state.profileReducer.posts}
+                    newPostText={state.profileReducer.newPostText}
                 />
             }
         }

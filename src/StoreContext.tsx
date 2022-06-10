@@ -1,9 +1,10 @@
 import React from 'react'
 import {StoreType} from "./redux/store";
+import {AppStoreType} from "./redux/redux-store";
 
 export const StoreContext = React.createContext({} as StoreType);
 export type ProviderType = {
-    store: StoreType
+    store: any
     children: React.ReactNode
 }
 
