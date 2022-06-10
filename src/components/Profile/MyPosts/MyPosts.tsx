@@ -3,14 +3,14 @@ import s from './MyPosts.module.css'
 import {Post} from "./Posts/Post";
 import {PostType} from "../../../redux/store";
 
-type MyPosts = {
+type MyPostsType = {
     addPost:() => void
     updateNewPostText:(text:string) => void
     posts: Array<PostType>
     newPostText: string
 }
 
-export const MyPosts = (props: MyPosts) => {
+export const MyPosts = (props: MyPostsType) => {
     let postsElement = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)
     let newPostElement = React.createRef<HTMLTextAreaElement>();
 
